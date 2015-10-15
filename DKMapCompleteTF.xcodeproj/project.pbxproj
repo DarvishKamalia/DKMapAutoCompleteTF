@@ -10,6 +10,9 @@
 		7C42DD491BCF0378004C3940 /* DKMapCompleteTF.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C42DD481BCF0378004C3940 /* DKMapCompleteTF.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C42DD501BCF0378004C3940 /* DKMapCompleteTF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C42DD451BCF0378004C3940 /* DKMapCompleteTF.framework */; settings = {ASSET_TAGS = (); }; };
 		7C42DD551BCF0378004C3940 /* DKMapCompleteTFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C42DD541BCF0378004C3940 /* DKMapCompleteTFTests.swift */; };
+		7C42DD621BCF057F004C3940 /* MapAutoCompleteTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C42DD5F1BCF057F004C3940 /* MapAutoCompleteTVC.swift */; settings = {ASSET_TAGS = (); }; };
+		7C42DD631BCF057F004C3940 /* MapAutoCompleteTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C42DD601BCF057F004C3940 /* MapAutoCompleteTVC.xib */; settings = {ASSET_TAGS = (); }; };
+		7C42DD641BCF057F004C3940 /* DKMapCompleteTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C42DD611BCF057F004C3940 /* DKMapCompleteTF.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		7C42DD4F1BCF0378004C3940 /* DKMapCompleteTFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKMapCompleteTFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C42DD541BCF0378004C3940 /* DKMapCompleteTFTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKMapCompleteTFTests.swift; sourceTree = "<group>"; };
 		7C42DD561BCF0378004C3940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C42DD5F1BCF057F004C3940 /* MapAutoCompleteTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAutoCompleteTVC.swift; sourceTree = "<group>"; };
+		7C42DD601BCF057F004C3940 /* MapAutoCompleteTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapAutoCompleteTVC.xib; sourceTree = "<group>"; };
+		7C42DD611BCF057F004C3940 /* DKMapCompleteTF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKMapCompleteTF.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				7C42DD481BCF0378004C3940 /* DKMapCompleteTF.h */,
 				7C42DD4A1BCF0378004C3940 /* Info.plist */,
+				7C42DD5F1BCF057F004C3940 /* MapAutoCompleteTVC.swift */,
+				7C42DD601BCF057F004C3940 /* MapAutoCompleteTVC.xib */,
+				7C42DD611BCF057F004C3940 /* DKMapCompleteTF.swift */,
 			);
 			path = DKMapCompleteTF;
 			sourceTree = "<group>";
@@ -142,6 +151,7 @@
 		7C42DD3C1BCF0378004C3940 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Darvish Kamalia";
 				TargetAttributes = {
@@ -176,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C42DD631BCF057F004C3940 /* MapAutoCompleteTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C42DD641BCF057F004C3940 /* DKMapCompleteTF.swift in Sources */,
+				7C42DD621BCF057F004C3940 /* MapAutoCompleteTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,26 +320,37 @@
 		7C42DD5A1BCF0378004C3940 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = DKMapCompleteTF/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DK.DKMapCompleteTF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		7C42DD5B1BCF0378004C3940 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = DKMapCompleteTF/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -375,6 +399,7 @@
 				7C42DD5B1BCF0378004C3940 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C42DD5C1BCF0378004C3940 /* Build configuration list for PBXNativeTarget "DKMapCompleteTFTests" */ = {
 			isa = XCConfigurationList;
@@ -383,6 +408,7 @@
 				7C42DD5E1BCF0378004C3940 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
