@@ -69,7 +69,6 @@ public class DKMapCompleteTF: UITextField, UITableViewDelegate, UITableViewDataS
         
         notificationCenter.addObserverForName(UITextFieldTextDidChangeNotification, object: self, queue: mainQueue) { notification  in
             
-            print ("textfield changed")
             if (self.text!.characters.count > self.minimumInputLengthForSearch) {
                 
                 if( self.completeTable == nil) {
@@ -86,7 +85,6 @@ public class DKMapCompleteTF: UITextField, UITableViewDelegate, UITableViewDataS
         
         notificationCenter.addObserverForName(UITextFieldTextDidBeginEditingNotification, object: self, queue: mainQueue) { _ in
             
-            print("edit")
             
             if (self.completeTable == nil) {
                 
@@ -113,7 +111,7 @@ public class DKMapCompleteTF: UITextField, UITableViewDelegate, UITableViewDataS
         
         completeTable = UITableView(frame: CGRect(x: self.frame.origin.x, y: self.frame.origin.y + self.frame.height, width: self.frame.width, height:0), style: UITableViewStyle.Plain)
         
-        completeTable.registerNib(UINib(nibName: "MapAutoCompleteTVC", bundle: nil), forCellReuseIdentifier: "MapAutoCompleteCell")
+        completeTable.registerNib(UINib(nibName: "MapAutoCompleteTVC", bundle: NSBundle(forClass: self.dynamicType)), forCellReuseIdentifier: "MapAutoCompleteCell")
         
         
         self.superview!.addSubview(completeTable)
